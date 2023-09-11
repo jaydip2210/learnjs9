@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/backcolor.css">
+</head>
+<body>
+    <div id="container">
+    <form action="" onsubmit="return handlesubmit()">
+        <input type="text" id="principal" placeholder="Principal">
+        <br><br>
+        <input type="text" id="rate" placeholder="Rate">
+        <br><br>
+        <input type="text" id="time" placeholder="Time">
+        <select name="select" id="select">
+            <option value="0">--select--</option>
+            <option value="year">year</option>
+            <option value="month">month</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+
+    <span>result:</span>
+    <div id="disp"></div>
+</div>
+
+    <script src="js/intrest_calcute.js"></script>
+</body>
+</html>
