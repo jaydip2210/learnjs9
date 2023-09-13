@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Mouse events:</label>
+
+    <h2 onclick="handelonclick()">jaydip</h2>
+
+    <input type="text" name="onmouseover" id="onmouseover" placeholder="onmouseover" onmouseover="handelonmouseover()">
+    <br><br>
+
+    <input type="text" name="onmouseout" id="onmouseout" placeholder="onmouseout" onmouseout="handelonmouseout()">
+    <br><br>
+
+    <input type="text" name="onmousedown" id="onmousedown" placeholder="onmousedown" onmousedown="handelonmousedown()">
+    <br><br>
+
+    <input type="text" name="onmouseup" id="onmouseup" placeholder="onmouseup" onmouseup="handelonmouseup()">
+    <br><br>
+
+    <input type="text" name="onmousemove" id="onmousemove" placeholder="onmousemove" onmousemove="handelonmousemove()">
+    <br><br> 
+
+    <label for="">Keyboard events:</label>
+    <br><br>
+
+    <input type="text" name="keydown" id="keydown" placeholder="keydown" onkeydown="keydown()">
+    <br><br>
+
+    <input type="text" name="keyup" id="keyup" placeholder="keyup" onkeyup="keyup()">
+    <br><br>
+
+    <label for="">Form events:</label>
+    <br><br>
+
+    <input type="text" name="onfocus" id="onfocus" placeholder="onfocus" onfocus="handelonfocus()" onblur="handelonblur()">
+    <br><br>
+    
+    <h1>window</h1>
+    <br><br>
+
+
+    <script src="js/events.js"></script>
+</body>
+</html>
