@@ -14,6 +14,13 @@ function validateForm() {
     let hobby = document.contactForm.hobbies;
     // console.log(hobbies);
 
+    let nameE = true;
+    let emailE = true;
+    let mobileE = true;
+    let countryE = true;
+    let genderE = true;
+    let hobbyE = true;
+
     let flag = false;
 
     for (let i=0; i<hobby.length; i++) {
@@ -27,6 +34,7 @@ function validateForm() {
 
     if (flag) {
         document.getElementById("hobbyErr").innerHTML = ""
+        hobbyE = false;
     } else {
         document.getElementById("hobbyErr").innerHTML = "Please select Altist one hobby"
     }
@@ -40,6 +48,7 @@ function validateForm() {
 
         if (redexp.test(name)) {
             document.getElementById("nameErr").innerHTML = " ";
+            nameE = false;
         } else {
             document.getElementById("nameErr").innerHTML = "Please enter valid name";
         }
@@ -55,6 +64,7 @@ function validateForm() {
 
         if (emailReg.test(email)) {
             document.getElementById("emailErr").innerHTML = " ";
+            emailE = false;
         } else {
             document.getElementById("emailErr").innerHTML = "Please enter valid email";
         }
@@ -70,6 +80,7 @@ function validateForm() {
 
         if (mobileReg.test(mobile)) {
             document.getElementById("mobileErr").innerHTML = " ";
+            mobileE = false;
         } else {
             document.getElementById("mobileErr").innerHTML = "Please enter valid number";
         }
@@ -82,13 +93,22 @@ function validateForm() {
         document.getElementById("countryErr").innerHTML = "Please select your country";
     } else {
         document.getElementById("countryErr").innerHTML = " ";
+        countryE = false;
     }
 
     if(gender === '') {
         document.getElementById("genderErr").innerHTML = "Please select your gender"
     } else {
         document.getElementById("genderErr").innerHTML = ""
+        genderE = false;
     }
 
-    return false;
+    if (nameE || emailE || mobileE || countryE || genderE || hobbyE) {
+        return false;
+    } else {
+        return true;
+    }
+
+  
+    // return false;
 }
