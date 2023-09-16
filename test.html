@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+<body>
+    <form action="" onsubmit="return handlesubmit()">
+        <span>Product</span>
+        <input type="text" id="product" name="product">
+        <span class="error" id="productErr"></span>
+        <br><br>
+        <textarea name=""  id="description" cols="30" rows="10"></textarea>
+        <span class="error" id="descriptionErr"></span>
+        <br><br>
+        <span>Price</span>
+        <input type="text" id="price" name="price">
+        <span class="error" id="priceErr"></span>
+        <br><br>
+        <span>Discount</span>
+        <input type="radio" id="discount" name="discount" value="yes">yes
+        <input type="radio" id="discount" name="discount" value="no">no
+        <span class="error" id="discountErr"></span>
+        <br><br>
+        <span>Coupon</span>
+        <input type="text" id="coupon" placeholder="coupon">
+        <input type="submit">
+    </form>
+
+    <table border="1">
+        <tr>
+            <th>sr.no</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Coupon</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td id="pro"></td>
+            <td id="des"></td>
+            <td id="pri"></td>
+            <td id="dis"></td>
+            <td id="cop"></td>
+        </tr>
+    </table>
+
+    <script src="js/test.js"></script>
+</body>
+</html>
