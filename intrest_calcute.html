@@ -11,15 +11,19 @@
     <form action="" onsubmit="return handlesubmit()">
         <h1>intrest_calcute</h1>
         <input type="text" id="principal" placeholder="Principal">
+        <span id="pErr"></span>
         <br><br>
         <input type="text" id="rate" placeholder="Rate">
+        <span id="rErr"></span>
         <br><br>
         <input type="text" id="time" placeholder="Time">
+        <span id="tErr"></span>
         <select name="select" id="select">
             <option value="0">--select--</option>
             <option value="year">year</option>
             <option value="month">month</option>
         </select>
+        <span id="sErr"></span>
         <br><br>
         <input type="submit" id="btn">
     </form>

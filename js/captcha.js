@@ -12,12 +12,17 @@ let correctAns = n1 + n2;
 function handlesubmit() {
     console.log("handlesubmit");
 
-    let uservalue = parseInt(document.getElementById("ans").value);
+    let uservalue = parseInt(document.getElementById("ans").value); 
     
     if(uservalue == correctAns) {
-        alert("Correct")
+        if (document.getElementById("ans").value == uservalue) {
+            alert("Correct")
+        } else {
+            alert("Incorrect. Correct ans is." + correctAns)
+        }
+        document.getElementById("ansErr").innerHTML = '';
     } else {
-        alert("Incorrect. Correct ans is." + correctAns)
+        document.getElementById("ansErr").innerHTML = 'Please enter answer.';
     }
 
     return false;
