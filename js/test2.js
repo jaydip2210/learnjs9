@@ -48,7 +48,7 @@ function handlesubmit() {
             insurance = "Please enter valid amount"
         } 
     } else if (income === "3_to_5") {
-        if (amount > "1Lakh" && amount < 10000000) {
+        if (amount > 100000 && amount < 10000000) {
             insurance =  amount;
         } else if (amount > "1Cr") {
             insurance = "Please enter valid amount"
