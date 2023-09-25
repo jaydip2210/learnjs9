@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" name="system" onsubmit="return handlesubmit()">
+    <form action="" name="form" onsubmit="return handlesubmit()">
         <span>Name:</span>
         <input type="text" id="name">
         <br><br>
@@ -42,14 +42,31 @@
         <br><br>
 
         <span>Smoke:</span>
-        <input type="radio" id="smoke">yes
-        <input type="radio" id="smoke">no
+        <input type="radio" name="smoke" value="yes">yes
+        <input type="radio" name="smoke" value="no">no
         <br><br>
 
         <input type="submit">
-
-
     </form>
+    <br>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Mobile No</th>
+            <th>Insurance Amount</th>
+            <th>Premium</th>
+        </tr>
+
+        <tr>
+            <td id="n"></td>
+            <td id="a"></td>
+            <td id="m"></td>
+            <td id="ia"></td>
+            <td id="p"></td>
+        </tr>
+    </table>
 
     <script src="js/test2.js"></script>
 </body>

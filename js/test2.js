@@ -7,7 +7,7 @@ function handlesubmit() {
     let occupation = document.getElementById("occupation").value;
     let income = document.getElementById("income").value;
     let amount = document.getElementById("amount").value;
-    let smoke = document.getElementById("smoke").value;
+    let smoke = document.form.smoke.value;
     console.log(income,amount,smoke);
 
     console.log(occupation);
@@ -44,23 +44,42 @@ function handlesubmit() {
     if (income === "0_to_3") {
         if (amount > 100000 && amount < 5000000) {
             insurance =  amount;
-        } else if (amount > "50Lakh") {
+        } else if (amount > 5000000) {
             insurance = "Please enter valid amount"
         } 
     } else if (income === "3_to_5") {
         if (amount > 100000 && amount < 10000000) {
             insurance =  amount;
-        } else if (amount > "1Cr") {
+        } else if (amount > 10000000) {
             insurance = "Please enter valid amount"
         } 
-    } else if (income === "3_to_5") {
-        if (amount > "1Lakh" && amount < "1Cr") {
+    } else if (income === "5_to_10") {
+        if (amount > 100000 && amount < 15000000) {
             insurance =  amount;
-        } else if (amount > "1Cr") {
+        } else if (amount > 15000000) {
             insurance = "Please enter valid amount"
         } 
+    } else if (income === "Above_10") {
+        if (amount > 100000 && amount > 20000000) {
+            insurance =  amount;
+        }
     }
     console.log(insurance);
+
+    let sPremium;
+
+    if (smoke === "yes") {
+        sPremium = ePremium + premium * 0.20;
+    } 
+    console.log(sPremium);
+
+    let finalPremium = premium + ePremium + sPremium;
+
+    document.getElementById("n").innerHTML = name;
+    document.getElementById("a").innerHTML = d;
+    document.getElementById("m").innerHTML = mobile;
+    document.getElementById("ia").innerHTML = insurance;
+    document.getElementById("p").innerHTML = finalPremium;
 
     return false;
 }
