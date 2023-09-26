@@ -43,25 +43,25 @@ function handlesubmit() {
 
     if (income === "0_to_3") {
         if (amount > 100000 && amount < 5000000) {
-            insurance =  amount;
+            insurance = amount;
         } else if (amount > 5000000) {
             insurance = "Please enter valid amount"
         } 
     } else if (income === "3_to_5") {
         if (amount > 100000 && amount < 10000000) {
-            insurance =  amount;
+            insurance = amount;
         } else if (amount > 10000000) {
             insurance = "Please enter valid amount"
         } 
     } else if (income === "5_to_10") {
         if (amount > 100000 && amount < 15000000) {
-            insurance =  amount;
+            insurance = amount;
         } else if (amount > 15000000) {
             insurance = "Please enter valid amount"
         } 
     } else if (income === "Above_10") {
         if (amount > 100000 && amount > 20000000) {
-            insurance =  amount;
+            insurance = amount;
         }
     }
     console.log(insurance);
