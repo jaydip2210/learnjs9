@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #error {
+        color: red;
+    }
+
+    #disp{
+        display: none;
+    }
+</style>
+
 <body>
     <form action="" name="form" onsubmit="return handlesubmit()">
         <span>Name:</span>
@@ -13,7 +24,7 @@
 
         <span>Date Of Birth:</span>
         <input type="date" id="birth">
-        <br><br>   
+        <br><br>
 
         <span>Mobile No:</span>
         <input type="text" id="mobile">
@@ -39,6 +50,7 @@
 
         <span>Insurance Amount:</span>
         <input type="text" id="amount">
+        <span id="error"></span>
         <br><br>
 
         <span>Smoke:</span>
@@ -50,24 +62,27 @@
     </form>
     <br>
 
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Mobile No</th>
-            <th>Insurance Amount</th>
-            <th>Premium</th>
-        </tr>
+    <div id="disp">
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Mobile No</th>
+                <th>Insurance Amount</th>
+                <th>Premium</th>
+            </tr>
 
-        <tr>
-            <td id="n"></td>
-            <td id="a"></td>
-            <td id="m"></td>
-            <td id="ia"></td>
-            <td id="p"></td>
-        </tr>
-    </table>
+            <tr>
+                <td id="n"></td>
+                <td id="a"></td>
+                <td id="m"></td>
+                <td id="ia"></td>
+                <td id="p"></td>
+            </tr>
+        </table>
+    </div>
 
     <script src="js/test2.js"></script>
 </body>
+
 </html>

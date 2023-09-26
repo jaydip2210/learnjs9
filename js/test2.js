@@ -36,32 +36,40 @@ function handlesubmit() {
 
     if (occupation === 'Self Employee') {
         ePremium = premium * 0.10;
+    } else if (occupation === 'Salaried') {
+        ePremium = 0;
     }
     console.log(ePremium);
 
     let insurance;
 
     if (income === "0_to_3") {
-        if (amount > 100000 && amount < 5000000) {
-            insurance = amount;
+        if (amount > 100000 && amount <= 5000000) {
+            insurance =  amount;
         } else if (amount > 5000000) {
-            insurance = "Please enter valid amount"
+            // insurance = "Please enter valid amount"
+            document.getElementById("error").innerHTML = "Please enter valid amount"
         } 
     } else if (income === "3_to_5") {
-        if (amount > 100000 && amount < 10000000) {
-            insurance = amount;
+        if (amount > 100000 && amount <= 10000000) {
+            insurance =  amount;
         } else if (amount > 10000000) {
-            insurance = "Please enter valid amount"
+            // insurance = "Please enter valid amount"
+            document.getElementById("error").innerHTML = "Please enter valid amount"
         } 
     } else if (income === "5_to_10") {
-        if (amount > 100000 && amount < 15000000) {
-            insurance = amount;
+        if (amount > 100000 && amount <= 15000000) {
+            insurance =  amount;
         } else if (amount > 15000000) {
-            insurance = "Please enter valid amount"
+            // insurance = "Please enter valid amount"
+            document.getElementById("error").innerHTML = "Please enter valid amount"
         } 
     } else if (income === "Above_10") {
-        if (amount > 100000 && amount > 20000000) {
-            insurance = amount;
+        if (amount > 100000 && amount <= 20000000) {
+            insurance =  amount;
+        } else if (amount > 20000000) {
+            // insurance = "Please enter valid amount"
+            document.getElementById("error").innerHTML = "Please enter valid amount"
         }
     }
     console.log(insurance);
@@ -70,7 +78,9 @@ function handlesubmit() {
 
     if (smoke === "yes") {
         sPremium = ePremium + premium * 0.20;
-    } 
+    } else if (smoke === 'no') {
+        sPremium = 0;
+    }
     console.log(sPremium);
 
     let finalPremium = premium + ePremium + sPremium;
@@ -80,6 +90,8 @@ function handlesubmit() {
     document.getElementById("m").innerHTML = mobile;
     document.getElementById("ia").innerHTML = insurance;
     document.getElementById("p").innerHTML = finalPremium;
+
+    document.getElementById("disp").style.display = 'block';
 
     return false;
 }
